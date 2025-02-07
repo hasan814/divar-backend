@@ -1,5 +1,6 @@
 import { connectDB } from "./src/config/db.js";
 
+import SwaggerConfig from "./src/config/swagger.config.js";
 import express from "express";
 import dotenv from "dotenv";
 
@@ -8,6 +9,7 @@ const main = async () => {
 
   dotenv.config();
   connectDB();
+  SwaggerConfig(app);
 
   app.listen(3000, () => {
     console.log("Server run On:http://localhost:3000");
