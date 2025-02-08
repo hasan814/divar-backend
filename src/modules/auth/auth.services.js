@@ -4,6 +4,7 @@ import { randomInt } from "crypto";
 import createHttpError from "http-errors";
 import autoBind from "auto-bind";
 import User from "../user/user.model.js";
+
 class AuthService {
   #model;
   constructor() {
